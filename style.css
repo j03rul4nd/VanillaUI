@@ -1,0 +1,121 @@
+section {
+    max-width: 600px;
+    width: 100%;
+}
+#GettingStarted code {
+    font-family: 'Courier New', monospace;
+    background-color: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: white;
+    color: rgba(30 64 175);
+    background-color: rgb(191 219 254 );
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+}
+#GettingStarted .sectorcode {
+    overflow-x: auto;
+}
+#goToGitHubBtn {
+    text-decoration: none;
+    color: inherit;
+}
+#GettingStarted code#codeScriptGetStarted, #GettingStarted code#codeCssGetStarted {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    font-size: 0.8rem;
+    flex-direction: row;
+    white-space: nowrap;
+    font-family: 'Courier New', monospace;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+pre{
+    display: none;
+    visibility: hidden;
+}
+preview{
+    display: block;
+    visibility: visible;
+}
+pre, 
+preview{
+    transition: visibility .5s ease;
+}
+.PreviewSizes {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+columntab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    min-width: 147px;
+    width: fit-content;
+    line-height: 28px;
+    height: 40px;
+    font-size: 16px;
+}
+tabstrip:hover{
+    opacity: .5;
+}
+tabstrip{
+    padding: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color:hsl(var(--color-foreground-test));
+}
+tabstrip[selected = "true"]:after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: hsl(var(--after-Selected));
+}
+tab {
+    border: 1px solid;
+    border-color: hsl(var(--tab-border));
+    color: hsl(var(--after-Selected));
+    border-radius: 0.5rem;
+    padding: 16px;
+    display: block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    min-width: 90%;
+    width: fit-content;
+}
+
+.MyGradientButton {
+    background: linear-gradient(red, #600000);
+    color: white;
+    border-radius: 7px;
+}
+
+
+
+.dark{
+    --after-Selected: 210 6% 93%;
+    --color-foreground-test: 210 6% 93%;
+}
+:root{
+    --after-Selected: 202 24% 9%;
+    --color-foreground-test: 240 4% 46%;
+    --tab-border: 240 6% 90%;
+}
+

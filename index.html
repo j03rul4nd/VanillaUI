@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/Icon.png" type="image/x-icon">
+    <title>VanillaUI</title>
+    <meta name="description" content="VanillaUI: Una potente librería de componentes JavaScript Vanilla que no requiere dependencias externas. Crea interfaces de usuario elegantes y eficientes sin complicaciones. Aprovecha la simplicidad de JavaScript puro para desarrollar aplicaciones web con estilo y funcionalidad. ¡Descubre una forma más pura de construir tu UI con VanillaUI!">
+    <meta name="keywords" content="VanillaUI, librería de componentes, JavaScript, Vanilla, UI, desarrollo web">
+    <meta name="author" content="Joel Benitez">
+
+
+    <!-- Meta Open Graph (para compartir en redes sociales): Proporciona metadatos específicos para que los enlaces compartidos en redes sociales se vean correctamente, incluyendo título, descripción e imagen. -->
+    <meta property="og:title" content="VanillaUI - Librería de Componentes JavaScript Vanilla">
+    <meta property="og:description" content="Crea interfaces de usuario elegantes y eficientes con VanillaUI.">
+    <meta property="og:image" content="./images/Icon.png">
+
+
+    
+    <link rel="stylesheet" href="/dist/vanillaui.css">
+    <script src="/dist/vanillaui.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-tomorrow.min.css">
+</head>
+<!-- <body class="dark"> -->
+<body class="dark">
+<section id="GettingStarted">
+    <h1>Vanilla UI: Dependency-Free Component Library</h1>
+    <p>Welcome to Vanilla UI, a component library that enables you to create attractive and functional interfaces using only vanilla CSS and JavaScript, without relying on external frameworks.</p>
+
+    <p>To get started, follow these simple steps:</p>
+
+    <ol>
+        <li>Make sure to include the CSS file in the <code>&lt;head&gt;</code> section of your HTML document:</li>
+        <div class="sectorcode">
+            <code id="codeCssGetStarted">&lt;link rel="stylesheet" href="/path-to-your-project/dist/vanillaui.css"&gt;</code>
+        </div>
+
+        <li>Place the following script just before closing the <code>&lt;body&gt;</code> tag:</li>
+        <div class="sectorcode">
+            <code id="codeScriptGetStarted">&lt;script src="/path-to-your-project/dist/vanillaui.js"&gt;&lt;/script&gt;</code>
+        </div>
+    </ol>
+
+    <p>The necessary files are located in the <code>dist</code> folder of this GitHub repository.</p>
+
+    <p>Explore a wide range of customizable components, from elegant buttons to interactive forms. Designed to be lightweight and flexible, Vanilla UI components provide you with the freedom to create exceptional user experiences without burdening your project with unnecessary dependencies.</p>
+
+    <p>The required files are in the <code>dist</code> folder of this GitHub repository. We hope you enjoy using Vanilla UI in your projects!</p>
+    
+    <div id="btn-repo">
+        <a id="goToGitHubBtn" href="https://github.com/your-username/your-repository/tree/main/dist" target="_blank">
+            Go to the 'dist' folder on GitHub
+        </a>
+    </div>
+
+</section>
+    <section id="SectionUsage">
+        <h2>
+            Button usage
+        </h2>
+        <columnTab class="columnTab">
+            <tabstrip class="previewTab" selected="true">Preview</tabstrip>
+            <tabstrip class="codeTab">Code</tabstrip>
+        </columnTab>
+        <tab class="tab">
+            <preview class="preview">
+                <button id="btn">Button</button>
+            </preview>
+            <pre data-codetype="codejavascript" title="JAVASCRIPT">
+               
+<code>const container = document.getElementById('btn');
+const vanillaUI = VanillaUI(container);
+const myButton = vanillaUI.createButton({ 
+    color:"Primary", 
+    onclick: ClickMe,
+}); </code>
+               
+            </pre>         
+        </tab>
+    </section>
+
+    <section id="Sectiondisabled">
+        <h3>
+            Disabled
+        </h3>
+        <columnTab class="columnTab">
+            <tabstrip class="previewTab" selected="true">Preview</tabstrip>
+            <tabstrip class="codeTab">Code</tabstrip>
+        </columnTab>
+        <tab class="tab">
+            <preview class="preview">
+                <button id="btn-Disabled">Button</button>
+            </preview>
+            <pre data-codetype="codejavascript" title="JAVASCRIPT">
+                
+<code>const container = document.getElementById('btn');
+const vanillaUI = VanillaUI(container);
+const myButton = vanillaUI.createButton({ 
+    color:"Primary", 
+    isDisabled: true,
+});</code>
+
+            </pre>         
+        </tab>
+    </section>
+
+    <section id="SectionSizes">
+        <h3>
+            Sizes
+        </h3>
+        <columnTab class="columnTab">
+            <tabstrip class="previewTab" selected="true">Preview</tabstrip>
+            <tabstrip class="codeTab">Code</tabstrip>
+        </columnTab>
+        <tab class="tab">
+            <preview class="preview PreviewSizes">
+                <button id="btn-Sizes-s">Small</button>
+                <button id="btn-Sizes-m">Medium</button>
+                <button id="btn-Sizes-l">Large</button>
+            </preview>
+            <pre data-codetype="codejavascript" title="JAVASCRIPT" >
+                
+<code>//Sizes Small
+VanillaUI(document.getElementById("btn-Sizes-s")).createButton({ 
+    color:"Primary", 
+    sizes: "Small"
+});
+//Sizes Medium
+VanillaUI(document.getElementById("btn-Sizes-m")).createButton({ 
+    color:"Primary", 
+    sizes: "Medium",
+});
+//Sizes Large
+VanillaUI(document.getElementById("btn-Sizes-l")).createButton({ 
+    color:"Primary", 
+    sizes: "Large",
+});</code>
+                
+            </pre>         
+        </tab>
+    </section>
+
+    <section id="SectionRadius">
+        <h3>
+            Radius
+        </h3>
+        <columnTab class="columnTab">
+            <tabstrip class="previewTab" selected="true">Preview</tabstrip>
+            <tabstrip class="codeTab">Code</tabstrip>
+        </columnTab>
+        <tab class="tab">
+            <preview class="preview PreviewSizes">
+                <button id="btn-Radius-f">Full</button>
+                <button id="btn-Radius-l">Large</button>
+                <button id="btn-Radius-m">Medium</button>
+                <button id="btn-Radius-s">Small</button>
+                <button id="btn-Radius-n">None</button>
+            </preview>
+            <pre data-codetype="codejavascript" title="JAVASCRIPT" >
+                
+<code>//Radius Full
+VanillaUI(document.getElementById("btn-Radius-f")).createButton({ 
+    color:"Primary", 
+    radius: "full",
+});
+//Radius large
+VanillaUI(document.getElementById("btn-Radius-l")).createButton({ 
+    color:"Primary", 
+    radius: "large",
+});
+//Radius medium
+VanillaUI(document.getElementById("btn-Radius-m")).createButton({ 
+    color:"Primary", 
+    radius: "medium",
+});
+//Radius small
+VanillaUI(document.getElementById("btn-Radius-s")).createButton({ 
+    color:"Primary", 
+    radius: "small",
+});
+//Radius none
+VanillaUI(document.getElementById("btn-Radius-n")).createButton({ 
+    color:"Primary", 
+    radius: "none",
+});</code>
+                
+            </pre>         
+        </tab>
+    </section>
+
+    <section id="SectionColors">
+        <h3>
+            Colors
+        </h3>
+        <columnTab class="columnTab">
+            <tabstrip class="previewTab" selected="true">Preview</tabstrip>
+            <tabstrip class="codeTab">Code</tabstrip>
+        </columnTab>
+        <tab class="tab">
+            <preview class="preview PreviewSizes">
+                <button id="btn-Colors-d">Default</button>
+                <button id="btn-Colors-p">Primary</button>
+                <button id="btn-Colors-s">Secondary</button>
+                <button id="btn-Colors-ss">Success</button>
+                <button id="btn-Colors-w">Warning</button>
+                <button id="btn-Colors-e">Error</button>
+            </preview>
+            <pre data-codetype="codejavascript" title="JAVASCRIPT" >
+                
+<code>//Colors Default
+VanillaUI(document.getElementById("btn-Colors-d")).createButton({ 
+    color:"Default"
+});
+//Colors Primary
+VanillaUI(document.getElementById("btn-Colors-p")).createButton({ 
+    color:"Primary"
+});
+//Colors Secondary
+VanillaUI(document.getElementById("btn-Colors-s")).createButton({ 
+    color:"Secondary"
+});
+//Colors Success
+VanillaUI(document.getElementById("btn-Colors-ss")).createButton({ 
+    color:"Success"
+});
+//Colors Warning
+VanillaUI(document.getElementById("btn-Colors-w")).createButton({ 
+    color:"Warning"
+});
+//Colors Error
+VanillaUI(document.getElementById("btn-Colors-e")).createButton({ 
+    color:"Error"
+});</code>
+                
+            </pre>         
+        </tab>
+    </section>
+
+    <section id="SectionVariants">
+        <h3>
+            Variants
+        </h3>
+        <columnTab class="columnTab">
+            <tabstrip class="previewTab" selected="true">Preview</tabstrip>
+            <tabstrip class="codeTab">Code</tabstrip>
+        </columnTab>
+        <tab class="tab">
+            <preview class="preview PreviewSizes">
+                <button id="btn-Variants-s">Solid</button>
+                <button id="btn-Variants-f">Faded</button>
+                <button id="btn-Variants-b">Bordered</button>
+                <button id="btn-Variants-l">Light</button>
+                <button id="btn-Variants-fl">Flat</button>
+                <button id="btn-Variants-g">Ghost</button>
+                <button id="btn-Variants-sh">Shadow</button>
+            </preview>
+            <pre data-codetype="codejavascript" title="JAVASCRIPT" >
+                
+<code>//Variants Solid
+VanillaUI(document.getElementById("btn-Variants-s")).createButton({ 
+    Variants:"Solid"
+});
+//Variants Faded
+VanillaUI(document.getElementById("btn-Variants-f")).createButton({ 
+    Variants:"Faded"
+});
+//Variants Bordered
+VanillaUI(document.getElementById("btn-Variants-b")).createButton({ 
+    Variants:"Bordered"
+});
+//Variants Light
+VanillaUI(document.getElementById("btn-Variants-l")).createButton({ 
+    Variants:"Light"
+});
+//Variants Flat
+VanillaUI(document.getElementById("btn-Variants-fl")).createButton({ 
+    Variants:"Flat"
+});
+//Variants Ghost
+VanillaUI(document.getElementById("btn-Variants-g")).createButton({ 
+    Variants:"Ghost"
+});
+//Variants Shadow
+VanillaUI(document.getElementById("btn-Variants-sh")).createButton({ 
+    Variants:"Shadow"
+});</code>
+                
+            </pre>         
+        </tab>
+    </section>
+
+    <section id="SectionCustom">
+        <h3>
+            Custom Styles
+        </h3>
+        <columnTab class="columnTab">
+            <tabstrip class="previewTab" selected="true">Preview</tabstrip>
+            <tabstrip class="codeTab">Code</tabstrip>
+        </columnTab>
+        <tab class="tab">
+            <preview class="preview">
+                <button id="btn-Custom">Custom Style</button>
+            </preview>
+            <pre data-codetype="codejavascript" title="JAVASCRIPT" >
+                
+<code>
+VanillaUI(document.getElementById("btn-Custom")).createButton({ 
+    className:"MyGradientButton"
+});</code>
+                
+            </pre>         
+        </tab>
+    </section>
+
+
+    <section id="SectionLoading">
+        <h3>
+        Loading        
+        </h3>
+        <columnTab class="columnTab">
+            <tabstrip class="previewTab" selected="true">Preview</tabstrip>
+            <tabstrip class="codeTab">Code</tabstrip>
+        </columnTab>
+        <tab class="tab">
+            <preview class="preview">
+                <button id="btn-Loading">
+                    Loading                  
+                </button>
+            </preview>
+            <pre data-codetype="codejavascript" title="JAVASCRIPT" >
+                
+<code>
+VanillaUI(document.getElementById("btn-Loading")).createButton({ 
+    isLoading: true
+});</code>
+                
+            </pre>         
+        </tab>
+    </section>
+
+</body>
+<script src="./main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+</html>
